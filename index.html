@@ -27,18 +27,21 @@
 		document.getElementById("btc").innerHTML = data.BTC.THB
     	document.getElementById("ada").innerHTML = data.ADA.THB
 
-        if (data.BTC.THB <= 1200000){
-		document.getElementById("willi").innerHTML =  "<span class='badge bg-success'>ซื้อ BTC เลย!</span>";
-        } 
-		else if (data.BTC.THB >= 1250000){
-		document.getElementById("willi").innerHTML =  "<span class='badge bg-danger'>อย่าเพิ่งซื้อ BTC!</span>";
+        	if (data.BTC.THB <= 1150000){
+		document.getElementById("willi").innerHTML =  "<span class='badge bg-success'>ซื้อ BTC แบบจัดหนักเลย!</span>";
+       		} 
+		else if (data.BTC.THB <= 1250000){
+		document.getElementById("willi").innerHTML =  "<span class='badge bg-success'>ทยอยซื้อ BTC แบบเบาๆ!</span>";
 		}
 		else {
-		document.getElementById("willi").innerHTML =  "<span class='badge bg-secondary'>รอให้จังหวะซื้อ BTC!</span>";
+		document.getElementById("willi").innerHTML =  "<span class='badge bg-danger'>อย่าเพิ่งซื้อ BTC!</span>";
 		}
+		 if (data.ADA.THB <= 25){
+		document.getElementById("willi2").innerHTML =  "<span class='badge bg-success'>ซื้อ ADA รัวๆแบบจัดเต็ม!</span>";
+       		} 
 		if (data.ADA.THB <= 30){
-		document.getElementById("willi2").innerHTML =  "<span class='badge bg-success'>ซื้อ ADA เลย!</span>";
-        } 
+		document.getElementById("willi2").innerHTML =  "<span class='badge bg-success'>กดทยอยซื้อ ADA แบบเบาๆ!</span>";
+       		} 
 		else if (data.ADA.THB > 30){
 		document.getElementById("willi2").innerHTML =  "<span class='badge bg-danger'>อย่าเพิ่งซื้อ ADA!</span>";
 		}
